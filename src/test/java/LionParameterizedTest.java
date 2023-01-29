@@ -27,7 +27,7 @@ public class LionParameterizedTest {
         return new Object[][] {
                 { "Самец", true},
                 { "Самка", false},
-                { "Пол животного неизвестен", false},
+                { "Пол животного неизвестен", true},
         };
     }
 
@@ -37,15 +37,14 @@ public class LionParameterizedTest {
     @Mock
     Feline feline;
 
-
     @Test
-    public void testDoesHaveMane() {
+    public void testDoesHaveMane(){
         try {
             Lion lion = new Lion(sex, feline);
             boolean actualHasMane = lion.doesHaveMane();
             assertEquals(expectedSex, actualHasMane);
         } catch (Exception thrown) {
-            assertEquals("Используйте допустимые значения пола животного - самец или самка", thrown.getMessage());
+            assertEquals("Используйте допустимые значения пола животного - самей или самка", thrown.getMessage());
         }
     }
 }

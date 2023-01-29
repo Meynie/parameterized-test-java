@@ -11,10 +11,8 @@ public class Feline extends Animal implements Predator {
 
     @Override
     public String getFamily() {
-
         return "Кошачьи";
     }
-
 
     public int getKittens() {
 
@@ -25,5 +23,4 @@ public class Feline extends Animal implements Predator {
 
         return kittensCount;
     }
-
 }

@@ -1,5 +1,6 @@
 import com.example.Feline;
 import com.example.Lion;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -21,10 +22,6 @@ public class LionTest {
         Lion lion = new Lion("Самец", feline);
         lion.getKittens();
         Mockito.verify(feline).getKittens();
-        //Mockito.when(feline.getKittens()).thenReturn(1);
-        //int actual = lion.getKittens();
-
-        //assertEquals(1, actual);
     }
 
     @Test

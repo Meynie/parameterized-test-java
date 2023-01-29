@@ -3,7 +3,6 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-
     boolean hasMane;
 
     private final Feline feline;
@@ -25,6 +24,7 @@ public class Lion {
     }
 
     public boolean doesHaveMane() {
+
         return hasMane;
     }
 

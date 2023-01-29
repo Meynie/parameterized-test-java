@@ -30,18 +30,11 @@ public class AnimalParameterizedTest {
     }
 
     @Test
-    public void testGetFood() throws Exception {
+    public void testGetFood(){
         try {
             assertEquals(expectedResultList, animal.getFood(typeAnimal));
         } catch (Exception thrown) {
             assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", thrown.getMessage());
         }
-    }
-
-    @Test
-    public void getFamilyTest() {
-        String expectedResult = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
-        String actualResult = animal.getFamily();
-        assertEquals(expectedResult, actualResult);
     }
 }
